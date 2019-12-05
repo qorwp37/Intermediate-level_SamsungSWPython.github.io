@@ -1,0 +1,19 @@
+
+play = int(input())
+for playNum in range(play):
+    input()
+    #정보를 리스트로 받고 인덱스리스트 만들기
+    infoList = list(map(int, input().split()))
+    indexList = list(0 for _ in range(len(infoList) + 1))
+
+    #정보를 돌리면서 인덱스리스트 값 올리기
+    for i in range(len(infoList)):
+        indexList[infoList[i]] += 1
+
+    #최대 빈도수 값을 찾기
+    maxNum = 1
+    for i in range(1, len(indexList)):
+        if indexList[maxNum] <= indexList[i]:
+            maxNum = i
+    #출력
+    print('#{} {}'.format(playNum+1, maxNum))
