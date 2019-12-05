@@ -38,6 +38,8 @@ SW Expert Academy 들어가서 learn → course
 
 ![](https://paper-attachments.dropbox.com/s_663B32E97BED7A155FAAD34E748AC03AFD2FCA6562904ADA818C3998C455A950_1569226527099_image.png)
 
+문제를 푼 답은 계속 업데이트 중이므로 위에 difficulty 와 문제 번호로 답을 참고하면됩니다.
+
 
 문제에서 주어지는 제약사항, 내가 고려할 인풋을 제한해준다.
 이런 문제들 나중에 배울텐데
