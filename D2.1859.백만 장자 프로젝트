@@ -1,0 +1,21 @@
+
+play = int(input())
+for playNum in range(1, play+1):
+
+    a = input()
+    dayList = list(map(int, input().split()))
+    sumPrice = 0
+    while len(dayList) > 0:
+        #미래날짜중 가장 큰 값을 찾는다
+        maxDay = 0
+        for i in range(len(dayList)):
+            if dayList[i] >= dayList[maxDay]:
+                maxDay = i
+        #그날보다 과거날짜의 물건은 다사고 가장 큰값날 판다
+        for j in range(maxDay):
+            sumPrice += dayList[maxDay] - dayList[j]
+
+        #그 뒤에도 더 날짜를 알면 똑같은 일을 반복 수행한다
+        dayList = dayList[maxDay+1:len(dayList)]
+    #출력
+    print('#{} {}'.format(playNum, sumPrice))
