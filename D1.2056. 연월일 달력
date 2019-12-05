@@ -1,0 +1,47 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <malloc.h>
+int main()
+{
+    int * arr=malloc(sizeof(int)*size*3);
+    int size;
+    scanf("%d",&size);
+
+    int i,year,month,day,num;
+    for(i=0;i<size;i++){
+        scanf("%d",&num);
+        year=num/10000;
+        month=(num/100)%100;
+        day=num%100;
+        ///////가장 가능성 높은 예외부터 하나하나 처리.
+        if(year<=0||year>=10000||month<=0||month>=13||day<=0||day>=32) {
+            arr[i*3]=-1;
+            continue;
+        }
+        if((month==4||month==6||month==9||month==11)&&day>=31){
+            arr[i*3]=-1;
+            continue;
+        }
+        if((month==2)&&day>=29)
+        {
+            arr[i*3]=-1;
+            continue;
+        }
+        if(((((year%4==0)&&(year%100!=0)))||(year%400==0))&&(month==2)){
+            if(day>=30) {
+                arr[i*3]=-1;
+                continue;
+            }
+        }
+        arr[i*3]=year;//////배열에 년월일 순으로 담음.
+        arr[i*3+1]=month;
+        arr[i*3+2]=day;
+    }
+    for(i=0;i<size;i++)////////그대로 배열 출력.
+    {
+        if(arr[i*3]==-1) printf("-1\n");
+        else printf("#%d %04d/%02d/%02d\n",i+1,arr[i*3],arr[i*3+1],arr[i*3+2]);
+    }
+    free(arr);
+    return 0;
+}
