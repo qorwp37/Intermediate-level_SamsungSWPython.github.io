@@ -1,0 +1,26 @@
+#https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PzOCKAigDFAUq&categoryId=AV5PzOCKAigDFAUq&categoryType=CODE
+test = int(input())
+for testCase in range(test):
+    inputNum = list(map(int, input().split()))
+    n = inputNum[0]
+    m = inputNum[1]
+    #NN 매트릭스 생성
+    nn = list(list(map(int, input().split())) for _ in range(n))
+    #MM 매트릭스 완전탐색후 시간이 중요할까 최적화가 중요할까?
+    #일단 base 생성하기
+    base1 = 0
+    base2 = -1
+    tmp = []
+    #base 돌리기 -- base기준 매트릭스돌력면 이중 -->합이 3중반복문
+    for i in range((n-m+1)*(n-m+1)):
+        s = 0
+        base2 += 1
+        if base2 == n-m+1:
+            base1 += 1
+            base2 = 0
+        for k in range(m):
+            for j in range(m):
+                s += nn[base1+k][base2+j]
+        tmp.append(s)
+    #가장 큰 값을 MAX로 출력.
+    print('#{} {}'.format(testCase+1, max(tmp)))
