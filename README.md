@@ -1,3 +1,5 @@
+Python 역량을 키우기위해 삼성사이트를 이용하는 법!!
+
 우리가 공부할 사이트
 https://swexpertacademy.com/main/main.do
 SW Expert Academy 들어가서 learn → course
@@ -10,7 +12,7 @@ SW Expert Academy 들어가서 learn → course
 ![](https://paper-attachments.dropbox.com/s_7E514FE34CB08CDC4BE4A72F85D8196F52430A130F6B4145E97C2168ABC7A3C1_1569225584926_image.png)
 
 
-비기너 파트는 이거 네개만 쓸모있고 필요한거 보면됨. 우린 파이썬이니까 파이썬으로.
+비기너 파트는 지루하다면 이거 네개만 쓸모있고 필요한거 더 보면됨. 
 
 
 그 다음 단계
@@ -32,7 +34,7 @@ SW Expert Academy 들어가서 learn → course
 
 여기 단계에선 이거 하나만 하면된다.(이거 하나만 제대로 해도 될정도로 매우 중요하다!!)
 
-하면서 문제 풀고싶다 하면 Code → problem→ 검색창에 ‘모의’ (총 20문제 19.09.23 기준)→ 풀자
+하면서 문제 풀고싶다 하면 Code → problem→ 검색창에 ‘모의’ 치고 풀자
 
 ![](https://paper-attachments.dropbox.com/s_663B32E97BED7A155FAAD34E748AC03AFD2FCA6562904ADA818C3998C455A950_1569226527099_image.png)
 
