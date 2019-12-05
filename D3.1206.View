@@ -1,0 +1,17 @@
+
+for testCase in range(1, 11):
+    #받아오기
+    num = int(input())
+    b = list(map(int, input().split()))
+    #2부터 97까지 양옆 두칸까지 빼서 둘다 양수면 count+1
+    count = 0
+    for j in range(2, num-2):
+        if b[j]-b[j-1] > 0 and b[j]-b[j-2] > 0 and b[j] - b[j+1] > 0 and b[j]-b[j+2] > 0:
+            a = list()
+            a.append(b[j-2])
+            a.append(b[j-1])
+            a.append(b[j+1])
+            a.append(b[j+2])
+            count += b[j]-max(a)
+            a.clear()
+    print("#{} {}".format(testCase, count))
